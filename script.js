@@ -860,8 +860,8 @@ console.log(name);
 let {name:studentname} = students1
 console.log(studentname);
 
-let {marks:{biology}} = students1
-console.log(biology);
+// let {marks:{biology}} = students1
+// console.log(biology);
 
 
 //spread operator
