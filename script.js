@@ -834,9 +834,6 @@ console.log(students.age);
 
 
 
-
-
-
 const data2a = new Object()
 data2a.name="sulthaaan"
 data2a.age=20
@@ -860,8 +857,8 @@ console.log(name);
 let {name:studentname} = students1
 console.log(studentname);
 
-// let {marks:{biology}} = students1
-// console.log(biology);
+let {marks:{biology}} = students1
+console.log(biology);
 
 
 //spread operator
@@ -871,3 +868,79 @@ console.log(st);
 
 console.log(delete students1.place);
 console.log(students1);
+
+
+
+//1
+const numbers = [1,2,3,4,5,6,7,8,9,10]
+let evencount = 0
+
+for(i=0;i<numbers.length;i++){
+
+  if (numbers[i]%2===0){
+    evencount++
+  }
+}
+console.log(evencount);
+
+2//
+
+function reversearray(arr){
+
+let reversed =[]
+
+for (let i =arr.length - 1;i>=0;i--){
+  reversed.push (arr[i])
+}
+return reversed
+
+}
+console.log(reversearray([1,2,3,4,5,6]));
+
+
+3// 
+
+function countletters (strz) {
+let vowels = 0
+let consonants = 0
+const vowellist = `aeiou`
+
+strz= strz.toLowerCase()
+
+for(let i=0;i<strz.length;i++){
+ let char =strz[i]
+
+if(char>=`a` && char<=`z`){
+
+if(vowellist.includes(char)){
+
+vowels++
+} else {
+consonants++
+}
+}
+}
+return{vowels,consonants}
+}
+console.log(countletters("hello world"));
+console.log(countletters("React js"));
+
+4//
+function capitalize(str){
+
+return str.charAt(0).toUpperCase()+ str.slice(1) ;
+}
+console.log(capitalize("hello"));
+
+
+5//
+
+function square(num) {
+
+return num * num ;
+
+}
+
+console.log(square(3));
+console.log(square(5));
+console.log(square(100));
