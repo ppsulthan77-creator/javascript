@@ -5,12 +5,11 @@ let x = 20
 x = 25
 console.log(x)
 
-// // const b = 30
-// // b = 35
-
-// console.log(b)
+const b = 30
+console.log(b)
 
 var c = 50
+ c = 45
 console.log(c)
 
 let success = false
@@ -22,7 +21,6 @@ let obj =
   name: "sulthan pp",
   age: "21"
 }
-
 console.log(obj);
 
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -85,6 +83,10 @@ console.log(!(5 > 3));
 let age = 15
 let result = (age >= 18) ? "adult" : "minor"
 console.log(result);
+
+
+
+
 
 // questions....
 
@@ -262,7 +264,7 @@ default:
 
 
 // 1)for loops
-for (let i=0;i<=10;i++){
+for (let i=4;i<=10;i++){
   console.log(i);
 }
 
@@ -270,7 +272,7 @@ for (let i=0;i<=10;i++){
 
 //2) while loop
 
-let v=0
+let v=3
 while (v<=8){
   console .log(v);
   v++
@@ -278,7 +280,7 @@ while (v<=8){
 
 //3) do while loop
 
-let h = 0
+let h = 6
 do {
   console .log(h);
   h++
@@ -343,6 +345,7 @@ function  abc (){
 }
 abc()
 
+
 // function with parameters
 
 function paraams (name){
@@ -353,6 +356,8 @@ function paraams (name){
 paraams("softroniics")
 
 
+
+
 //function with return
 
 function newfn(a,b){
@@ -361,11 +366,13 @@ function newfn(a,b){
 console.log(newfn(11,3));
 
 
+
+
 //function with expression
 
 const fn = function(){
 
-  console.log("function expression");
+  console.log("function efahesion");
 }
 fn()
 
@@ -470,7 +477,7 @@ console.log(array3[i]);
 //slice and splice
 
 const array5 = [1,3,4,6,7,8,4]
-const slices = array5.slice(0,5)
+const slices = array5.slice(0,3)
 console.log(slices);
 
 const splice = array5.splice(0,4)
@@ -481,7 +488,7 @@ console.log(array5);
 //some and every
 
 
-const sub = [{name:`A`,score:60},{name:`B`,score:30},{name:`c`,score:50}]
+const sub = [{name:`A`,score:10},{name:`B`,score:30},{name:`c`,score:60}]
 const info = sub.some(function(obj){
   if(obj.score>50){
 return true
@@ -536,19 +543,19 @@ nums1.forEach((num)=>console.log(num*2))
 
 //3.filter
 const nums2=[1,2,3,4]
-const result7=nums.filter((num)=>num%2==0)
+const result7= nums2.filter((num)=>num%2==0)
 console.log(result7);
 
 //4.find
 const nums3=[1,2,3,4]
-const result8=nums2.find((num)=>num%2==0)
+const result8=nums3.find((num)=>num%2==0)
 console.log(result8);
 
 
 //5.reduce
 
 const nums5=[1,2,3,4]
-const result9= nums.reduce((accumulator,current)=>{
+const result9= nums5.reduce((accumulator,current)=>{
   return accumulator+current
 },0)
 console.log(result9);
@@ -687,7 +694,7 @@ console.log(data.split(","));
 
 //10.charAt (index) 
 let strng33 = "boss"
-console.log(strng33.charAt(0));
+console.log(strng33.charAt(3));
 
 //11.concat
 let aa = " hello"
@@ -926,6 +933,7 @@ console.log(countletters("hello world"));
 console.log(countletters("React js"));
 
 4//
+
 function capitalize(str){
 
 return str.charAt(0).toUpperCase()+ str.slice(1) ;
@@ -944,3 +952,271 @@ return num * num ;
 console.log(square(3));
 console.log(square(5));
 console.log(square(100));
+
+
+
+// timer function
+
+setTimeout(()=>{
+    console.log('sulthaan timer function');
+    
+},4000)
+
+const timeout = setTimeout(()=>{
+
+    console.log('sulthan softroniics');
+    
+},1000)
+
+clearTimeout(timeout)
+
+
+
+setInterval(()=>{
+console.log('sofrooniiics 123344555');
+
+
+},2000)
+
+let count = 0
+let interval = setInterval(() => {
+    count ++
+    console.log(count);
+    
+if (count==7){
+clearInterval(interval)
+console.log('function stopped');
+
+}
+
+},1000 );
+  
+
+
+
+
+
+
+
+
+
+
+// dom = document object model
+
+document.getElementById('first').style.color = 'red'
+document.getElementsByClassName('second')[2].style.color = 'blue'
+document.getElementsByTagName('h1')[1].style.color= 'green'
+document.querySelector('.second').style.color= 'skyblue'
+
+const elements =  document.querySelectorAll('.second')
+elements.forEach (el=>{
+
+el.style.color = 'yellow'
+
+}
+)
+
+const txt = document.getElementById('text').innerHTML
+console.log(txt);
+const txt = document.getElementById('text').textContent
+console.log(txt);
+const txt = document.getElementById('text').innerText
+console.log(txt);
+
+document.getElementById('text').innerHTML = "<h1>hello friends</h1>"
+document.getElementById('text').textContent = "hello friends"
+document.getElementById('text').innerText = "hello friends"
+
+
+
+let list = document.getElementById('list')
+const li1 = document.createElement('li')
+const li2 = document.createElement('li')
+
+li1.innerText = "coffee"
+li2.innerText = 'tea'
+
+list.appendChild(li1)
+list.appendChild(li2)
+
+
+// button alert imp
+
+let btn = document.getElementById('btn').addEventListener('AnimationEffect',()=>{
+alert ("button clicked")
+}   
+)
+
+
+const buttonclick = ()=>{
+    alert (" Add button clicked")
+}
+
+
+let count = 1
+let btn = document.getElementById("btn")
+btn.addEventListener("click",()=>{
+document.getElementById('num').innerText = count++
+})
+
+
+
+let count = 100
+let btningrement = document.getElementById("btningrement")
+btningrement.addEventListener("click",()=>{
+document.getElementById('number').innerText = count ++
+}
+)
+
+
+
+let btnreset = document.getElementById("btnreset")
+btnreset.addEventListener("click",()=>{
+    count = 100
+document.getElementById('number').innerText = count
+}
+)
+
+
+let btndecrease = document.getElementById("btndecrease")
+btndecrease.addEventListener("click",()=>{
+document.getElementById('number').innerText = count --
+}
+)
+
+
+
+
+
+
+// Es6 concepts importantss
+
+
+
+// synchronous programming
+
+function synchronous(){
+
+console.log('step 1');
+console.log('step 2');
+console.log('step 3');
+
+}
+synchronous()
+
+
+//asynchronous
+
+function asynchronous () {
+
+console.log('steeppp 1');
+setTimeout(()=>{
+    
+console.log('step 2');
+
+
+
+},2000)
+
+console.log('step 3');
+
+
+}
+asynchronous()
+
+
+
+
+
+
+promise
+
+const mypromise = new Promise((resolve, reject) => {
+
+let success = false
+if (success){
+
+    resolve('task completed')
+}
+else {
+    reject ('failed')
+}
+})
+
+mypromise.then((result)=>{
+
+    console.log(result);
+
+})
+
+.catch((error)=>{
+console.log(error);
+
+});
+
+
+
+
+const mypromise = new Promise((resolve, reject) => {
+
+let success = false
+if (success){
+
+    resolve('task completed')
+}
+else {
+    reject ('failed')
+}
+})
+
+async function handlepromise () {
+  
+    try {
+        const result = await mypromise
+        console.log(result);
+        
+    }catch (error){
+
+        console.log(error);
+    }
+}
+handlepromise()
+
+
+
+
+
+
+const mypromise = new Promise((resolve,reject)=>{
+
+let success = false
+if(success){
+
+    resolve ('task completed')
+}
+
+else {
+    reject('failed')
+}
+
+
+})
+
+mypromise.then((result)=>{
+
+    console.log(result);
+    
+})
+
+
+.catch((error)=>{
+    console.log(error);
+    
+
+})
+
+
+
+
+
+
